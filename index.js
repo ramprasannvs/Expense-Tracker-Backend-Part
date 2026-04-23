@@ -22,6 +22,9 @@ app.get("/", (req, res) => {
 app.use("/auth", AuthRouter);
 app.use("/expenses", ensureAuthenticated, ExpenseRouter);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server is running on ${PORT}`);
+// });
+
+// Export for Vercel
+module.exports = app;
