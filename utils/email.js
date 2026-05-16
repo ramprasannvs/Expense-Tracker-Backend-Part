@@ -21,7 +21,7 @@ const sendOTPEmail = async (email, otp, purpose) => {
         : 'We received a request to reset your password. Use the OTP below to proceed.';
 
     const mailOptions = {
-        from: `"Expense Tracker" <${process.env.EMAIL_USER}>`,
+        from: '"Expense Tracker" <ramprasann503@gmail.com>',
         to: email,
         subject,
         html: `
