@@ -9,13 +9,6 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS
     }
 });
-transporter.verify((error, success) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log("Email server is ready");
-    }
-});
 
 const generateOTP = () => {
     return Math.floor(100000 + Math.random() * 900000).toString();
